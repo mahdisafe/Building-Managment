@@ -12,6 +12,10 @@ namespace Building_Managment
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+        public static string userId;
+        public static string UserName;
+
         [STAThread]
         static void Main()
         {
@@ -20,7 +24,7 @@ namespace Building_Managment
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            Application.Run(new Form1());
+            Application.Run(new FRM_Main());
         }
     }
 }

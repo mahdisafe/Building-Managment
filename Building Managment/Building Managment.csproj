@@ -35,13 +35,53 @@
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v17.2" />
     <Reference Include="DevExpress.Data.v17.2" />
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Map.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v17.2.DataModel, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v17.2.DataModel.EF6, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v17.2.ViewModel, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DevExpress.Printing.v17.2.Core" />
     <Reference Include="DevExpress.Utils.v17.2" />
     <Reference Include="DevExpress.XtraBars.v17.2" />
     <Reference Include="DevExpress.Sparkline.v17.2.Core" />
     <Reference Include="DevExpress.XtraEditors.v17.2" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,18 +92,367 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BL\CLS_LOGIN.cs" />
+    <Compile Include="Common\CollectionViewModel.cs" />
+    <Compile Include="Common\EntitiesViewModel.cs" />
+    <Compile Include="Common\ReadOnlyCollectionViewModel.cs" />
+    <Compile Include="Common\SingleObjectViewModel.cs" />
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="MyCode\Building.cs" />
+    <Compile Include="MyCode\Customer.cs" />
+    <Compile Include="MyCode\CustomersAttachment.cs" />
+    <Compile Include="MyCode\CustomerType.cs" />
+    <Compile Include="MyCode\Electricity_ShopsBills.cs" />
+    <Compile Include="MyCode\Expens.cs" />
+    <Compile Include="MyCode\ExpensessDetaile.cs" />
+    <Compile Include="MyCode\ExpenseType.cs" />
+    <Compile Include="MyCode\Owner.cs" />
+    <Compile Include="MyCode\PaymentMethod.cs" />
+    <Compile Include="MyCode\PaymentType.cs" />
+    <Compile Include="MyCode\Priv_Table.cs" />
+    <Compile Include="MyCode\Purchase.cs" />
+    <Compile Include="MyCode\PurchasesDetail.cs" />
+    <Compile Include="MyCode\PurchasesType.cs" />
+    <Compile Include="MyCode\Rent.cs" />
+    <Compile Include="MyCode\RentalDB.cs" />
+    <Compile Include="MyCode\RentDetaile.cs" />
+    <Compile Include="MyCode\Screen_Priv_Table.cs" />
+    <Compile Include="MyCode\Shop.cs" />
+    <Compile Include="MyCode\UsersGroup.cs" />
+    <Compile Include="MyCode\User_Table.cs" />
+    <Compile Include="PL\FRM_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PL\FRM_Login.Designer.cs">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Main.Designer.cs">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="RentalDBDataModel\IRentalDBUnitOfWork.cs" />
+    <Compile Include="RentalDBDataModel\RentalDBUnitOfWork.cs" />
+    <Compile Include="RentalDBDataModel\UnitOfWorkSource.cs" />
+    <Compile Include="ViewModels\Building\BuildingCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Building\BuildingViewModel.cs" />
+    <Compile Include="ViewModels\CustomersAttachment\CustomersAttachmentCollectionViewModel.cs" />
+    <Compile Include="ViewModels\CustomersAttachment\CustomersAttachmentViewModel.cs" />
+    <Compile Include="ViewModels\CustomerType\CustomerTypeCollectionViewModel.cs" />
+    <Compile Include="ViewModels\CustomerType\CustomerTypeViewModel.cs" />
+    <Compile Include="ViewModels\Customer\CustomerCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Customer\CustomerViewModel.cs" />
+    <Compile Include="ViewModels\Electricity_ShopsBills\Electricity_ShopsBillsCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Electricity_ShopsBills\Electricity_ShopsBillsViewModel.cs" />
+    <Compile Include="ViewModels\ExpensessDetaile\ExpensessDetaileCollectionViewModel.cs" />
+    <Compile Include="ViewModels\ExpensessDetaile\ExpensessDetaileViewModel.cs" />
+    <Compile Include="ViewModels\ExpenseType\ExpenseTypeCollectionViewModel.cs" />
+    <Compile Include="ViewModels\ExpenseType\ExpenseTypeViewModel.cs" />
+    <Compile Include="ViewModels\Expens\ExpensCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Expens\ExpensViewModel.cs" />
+    <Compile Include="ViewModels\Owner\OwnerCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Owner\OwnerViewModel.cs" />
+    <Compile Include="ViewModels\PaymentMethod\PaymentMethodCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PaymentMethod\PaymentMethodViewModel.cs" />
+    <Compile Include="ViewModels\PaymentType\PaymentTypeCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PaymentType\PaymentTypeViewModel.cs" />
+    <Compile Include="ViewModels\Priv_Table\Priv_TableCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Priv_Table\Priv_TableViewModel.cs" />
+    <Compile Include="ViewModels\PurchasesDetail\PurchasesDetailCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PurchasesDetail\PurchasesDetailViewModel.cs" />
+    <Compile Include="ViewModels\PurchasesType\PurchasesTypeCollectionViewModel.cs" />
+    <Compile Include="ViewModels\PurchasesType\PurchasesTypeViewModel.cs" />
+    <Compile Include="ViewModels\Purchase\PurchaseCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Purchase\PurchaseViewModel.cs" />
+    <Compile Include="ViewModels\RentalDBViewModel.cs" />
+    <Compile Include="ViewModels\RentDetaile\RentDetaileCollectionViewModel.cs" />
+    <Compile Include="ViewModels\RentDetaile\RentDetaileViewModel.cs" />
+    <Compile Include="ViewModels\Rent\RentCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Rent\RentViewModel.cs" />
+    <Compile Include="ViewModels\Screen_Priv_Table\Screen_Priv_TableCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Screen_Priv_Table\Screen_Priv_TableViewModel.cs" />
+    <Compile Include="ViewModels\Shop\ShopCollectionViewModel.cs" />
+    <Compile Include="ViewModels\Shop\ShopViewModel.cs" />
+    <Compile Include="ViewModels\UsersGroup\UsersGroupCollectionViewModel.cs" />
+    <Compile Include="ViewModels\UsersGroup\UsersGroupViewModel.cs" />
+    <Compile Include="ViewModels\User_Table\User_TableCollectionViewModel.cs" />
+    <Compile Include="ViewModels\User_Table\User_TableViewModel.cs" />
+    <Compile Include="Views\Building\BuildingCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Building\BuildingCollectionView.designer.cs">
+      <DependentUpon>BuildingCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Building\BuildingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Building\BuildingView.designer.cs">
+      <DependentUpon>BuildingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomersAttachment\CustomersAttachmentCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomersAttachment\CustomersAttachmentCollectionView.designer.cs">
+      <DependentUpon>CustomersAttachmentCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomersAttachment\CustomersAttachmentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomersAttachment\CustomersAttachmentView.designer.cs">
+      <DependentUpon>CustomersAttachmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerType\CustomerTypeCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerType\CustomerTypeCollectionView.designer.cs">
+      <DependentUpon>CustomerTypeCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerType\CustomerTypeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerType\CustomerTypeView.designer.cs">
+      <DependentUpon>CustomerTypeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerCollectionView.designer.cs">
+      <DependentUpon>CustomerCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerView.designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Electricity_ShopsBills\Electricity_ShopsBillsCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Electricity_ShopsBills\Electricity_ShopsBillsCollectionView.designer.cs">
+      <DependentUpon>Electricity_ShopsBillsCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Electricity_ShopsBills\Electricity_ShopsBillsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Electricity_ShopsBills\Electricity_ShopsBillsView.designer.cs">
+      <DependentUpon>Electricity_ShopsBillsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpensessDetaile\ExpensessDetaileCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ExpensessDetaile\ExpensessDetaileCollectionView.designer.cs">
+      <DependentUpon>ExpensessDetaileCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpensessDetaile\ExpensessDetaileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ExpensessDetaile\ExpensessDetaileView.designer.cs">
+      <DependentUpon>ExpensessDetaileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpenseType\ExpenseTypeCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ExpenseType\ExpenseTypeCollectionView.designer.cs">
+      <DependentUpon>ExpenseTypeCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExpenseType\ExpenseTypeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ExpenseType\ExpenseTypeView.designer.cs">
+      <DependentUpon>ExpenseTypeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expens\ExpensCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Expens\ExpensCollectionView.designer.cs">
+      <DependentUpon>ExpensCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Expens\ExpensView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Expens\ExpensView.designer.cs">
+      <DependentUpon>ExpensView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Owner\OwnerCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Owner\OwnerCollectionView.designer.cs">
+      <DependentUpon>OwnerCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Owner\OwnerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Owner\OwnerView.designer.cs">
+      <DependentUpon>OwnerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaymentMethod\PaymentMethodCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PaymentMethod\PaymentMethodCollectionView.designer.cs">
+      <DependentUpon>PaymentMethodCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaymentMethod\PaymentMethodView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PaymentMethod\PaymentMethodView.designer.cs">
+      <DependentUpon>PaymentMethodView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaymentType\PaymentTypeCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PaymentType\PaymentTypeCollectionView.designer.cs">
+      <DependentUpon>PaymentTypeCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PaymentType\PaymentTypeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PaymentType\PaymentTypeView.designer.cs">
+      <DependentUpon>PaymentTypeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Priv_Table\Priv_TableCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Priv_Table\Priv_TableCollectionView.designer.cs">
+      <DependentUpon>Priv_TableCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Priv_Table\Priv_TableView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Priv_Table\Priv_TableView.designer.cs">
+      <DependentUpon>Priv_TableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PurchasesDetail\PurchasesDetailCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PurchasesDetail\PurchasesDetailCollectionView.designer.cs">
+      <DependentUpon>PurchasesDetailCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PurchasesDetail\PurchasesDetailView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PurchasesDetail\PurchasesDetailView.designer.cs">
+      <DependentUpon>PurchasesDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PurchasesType\PurchasesTypeCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PurchasesType\PurchasesTypeCollectionView.designer.cs">
+      <DependentUpon>PurchasesTypeCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PurchasesType\PurchasesTypeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PurchasesType\PurchasesTypeView.designer.cs">
+      <DependentUpon>PurchasesTypeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Purchase\PurchaseCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Purchase\PurchaseCollectionView.designer.cs">
+      <DependentUpon>PurchaseCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Purchase\PurchaseView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Purchase\PurchaseView.designer.cs">
+      <DependentUpon>PurchaseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RentalDBView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RentalDBView.designer.cs">
+      <DependentUpon>RentalDBView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RentDetaile\RentDetaileCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RentDetaile\RentDetaileCollectionView.designer.cs">
+      <DependentUpon>RentDetaileCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RentDetaile\RentDetaileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RentDetaile\RentDetaileView.designer.cs">
+      <DependentUpon>RentDetaileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Rent\RentCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Rent\RentCollectionView.designer.cs">
+      <DependentUpon>RentCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Rent\RentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Rent\RentView.designer.cs">
+      <DependentUpon>RentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Screen_Priv_Table\Screen_Priv_TableCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Screen_Priv_Table\Screen_Priv_TableCollectionView.designer.cs">
+      <DependentUpon>Screen_Priv_TableCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Screen_Priv_Table\Screen_Priv_TableView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Screen_Priv_Table\Screen_Priv_TableView.designer.cs">
+      <DependentUpon>Screen_Priv_TableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shop\ShopCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Shop\ShopCollectionView.designer.cs">
+      <DependentUpon>ShopCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shop\ShopView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Shop\ShopView.designer.cs">
+      <DependentUpon>ShopView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersGroup\UsersGroupCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UsersGroup\UsersGroupCollectionView.designer.cs">
+      <DependentUpon>UsersGroupCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsersGroup\UsersGroupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UsersGroup\UsersGroupView.designer.cs">
+      <DependentUpon>UsersGroupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User_Table\User_TableCollectionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User_Table\User_TableCollectionView.designer.cs">
+      <DependentUpon>User_TableCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User_Table\User_TableView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\User_Table\User_TableView.designer.cs">
+      <DependentUpon>User_TableView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PL\FRM_Login.resx">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="PL\FRM_Main.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,6 +462,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,6 +473,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RPT\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

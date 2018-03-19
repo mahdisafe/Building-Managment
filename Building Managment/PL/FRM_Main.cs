@@ -9,11 +9,16 @@ using System.Windows.Forms;
 
 namespace Building_Managment
 {
-    public partial class Form1 : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class FRM_Main : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public Form1()
+        public FRM_Main()
         {
             InitializeComponent();
+        }
+
+        private void buildingManagerDBView1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
